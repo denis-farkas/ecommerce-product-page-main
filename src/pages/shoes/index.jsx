@@ -5,6 +5,7 @@ import { ArticleProvider } from '../../context/articleProvider';
 import { CartProvider } from '../../context/cartProvider';
 import './shoes.css';
 import Gallery from '../../componentes/Gallery';
+import Presentation from '../../componentes/Presentation';
 
 function Shoes() {
   return (
@@ -18,7 +19,7 @@ function Shoes() {
                 <Gallery />
               </div>
               <div className="presentation">
-                <h1>Présentation</h1>
+                <Presentation />
               </div>
             </div>
             <Footer />

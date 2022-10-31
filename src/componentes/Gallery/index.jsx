@@ -4,7 +4,7 @@ import './gallery.css';
 
 const Gallery = () => {
   const { article, getArticle } = useContext(ArticleContext);
-  const id = 1;
+  let id = 1;
 
   useEffect(() => {
     getArticle(id);
@@ -22,26 +22,34 @@ const Gallery = () => {
           />
         </div>
         <div className="gallery-footer">
-          <img
-            className="image-thumb"
-            src={`images/${thumbnails[0]}`}
-            alt="thumbnail product 1"
-          />
-          <img
-            className="image-thumb"
-            src={`images/${thumbnails[1]}`}
-            alt="thumbnail product 2"
-          />
-          <img
-            className="image-thumb"
-            src={`images/${thumbnails[2]}`}
-            alt="thumbnail product 3"
-          />
-          <img
-            className="image-thumb"
-            src={`images/${thumbnails[3]}`}
-            alt="thumbnail product 4"
-          />
+          <div className="thumb">
+            <img
+              className="image-thumb selected"
+              src={`images/${thumbnails[0]}`}
+              alt="thumbnail product 1"
+            />
+          </div>
+          <div className="thumb">
+            <img
+              className="image-thumb"
+              src={`images/${thumbnails[1]}`}
+              alt="thumbnail product 2"
+            />
+          </div>
+          <div className="thumb">
+            <img
+              className="image-thumb"
+              src={`images/${thumbnails[2]}`}
+              alt="thumbnail product 3"
+            />
+          </div>
+          <div className="thumb">
+            <img
+              className="image-thumb"
+              src={`images/${thumbnails[3]}`}
+              alt="thumbnail product 4"
+            />
+          </div>
         </div>
       </div>
     );

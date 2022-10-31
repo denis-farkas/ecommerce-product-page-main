@@ -9,7 +9,9 @@ const CartProvider = ({ children }) => {
 
   useEffect(() => {
     let currentCart = JSON.parse(localCart);
-    if (currentCart) setCart(currentCart);
+    if (currentCart) {
+      setCart(currentCart);
+    }
   }, []); //the empty array ensures useEffect only runs once
 
   const addItem = (item) => {
