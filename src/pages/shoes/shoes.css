@@ -21,7 +21,7 @@ body {
 }
 
 .show {
-  width: 50%;
+  width: 554px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -31,7 +31,7 @@ body {
 }
 
 .presentation {
-  width: 50%;
+  width: 554px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;

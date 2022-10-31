@@ -1,6 +1,5 @@
 import { useState, createContext } from 'react';
 import axios from 'axios';
-
 import PropTypes from 'prop-types';
 
 export const UserContext = createContext();
