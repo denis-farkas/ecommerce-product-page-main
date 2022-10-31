@@ -4,4 +4,27 @@ html {
 
 body {
   font-family: 'Kumbh Sans', sans-serif;
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 1108px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.main {
+  display: flex;
+}
+
+.show {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.presentation {
+  width: 50%;
+  justify-content: flex-start;
+  align-items: center;
 }

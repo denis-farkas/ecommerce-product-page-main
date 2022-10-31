@@ -1,29 +1,26 @@
-import { useState, createContext, useEffect } from 'react';
+import { useState, createContext } from 'react';
 import axios from 'axios';
+
 import PropTypes from 'prop-types';
 
 export const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
-  const [user, setUser] = useState();
+  const [user, setUser] = useState({});
 
-  let url = `data/users.json`;
-
-  const getUser = async () => {
+  const getUser = async (id) => {
     try {
-      const { data } = await axios.get(url);
+      const { data } = await axios.get(`data/user${id}.json`);
       setUser(data);
     } catch (error) {
       console.log(error);
     }
   };
 
-  useEffect(() => {
-    getUser();
-  }, []);
-
   return (
-    <UserContext.Provider value={{ user }}>{children}</UserContext.Provider>
+    <UserContext.Provider value={{ user, getUser }}>
+      {children}
+    </UserContext.Provider>
   );
 };
 

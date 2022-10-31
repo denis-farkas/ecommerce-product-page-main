@@ -1,0 +1,19 @@
+.navbar-nav {
+  list-style-type: none;
+  margin: 0 39px;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 0 7.7px;
+  margin-top: 0.3rem;
+  padding-top: 1rem;
+  padding-bottom: 1.4rem;
+  font-size: 15.5px;
+  color: hsl(219, 9%, 45%);
+}
+
+.nav-item.active {
+  border-bottom: 3px solid hsl(26, 100%, 55%);
+}

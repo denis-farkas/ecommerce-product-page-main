@@ -1,0 +1,23 @@
+.avatar {
+  width: 3rem;
+  height: auto;
+  cursor: pointer;
+  padding-right: 2px;
+}
+
+.avatar:hover {
+  border: 2px solid hsl(26, 100%, 55%);
+  border-radius: 50%;
+  padding-right: 0;
+}
+
+.cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 7.2rem;
+}
+
+.small-cart {
+  cursor: pointer;
+}
