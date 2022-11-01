@@ -19,7 +19,7 @@ const Presentation = () => {
 
   const [counter, setCounter] = useState(1);
 
-  let shopCart = {
+  let shopCart = thumbnails && {
     id: id_article,
     name: name,
     price: price,
@@ -27,14 +27,11 @@ const Presentation = () => {
     quantity: counter,
   };
 
-  console.log(shopCart);
   const incrementCount = () => {
     setCounter(counter + 1);
-    shopCart.quantity = counter;
   };
   const decrementCount = () => {
     setCounter((c) => Math.max(c - 1, 0));
-    shopCart.quantity = counter;
   };
 
   const validateItem = () => {

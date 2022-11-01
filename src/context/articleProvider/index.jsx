@@ -21,7 +21,7 @@ const ArticleProvider = ({ children }) => {
 
   useEffect(() => {
     getArticle(id_article);
-  }, [id_article]);
+  }, []);
 
   return (
     <ArticleContext.Provider value={{ article }}>
