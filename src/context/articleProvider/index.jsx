@@ -1,4 +1,4 @@
-import { useState, createContext } from 'react';
+import { useEffect, useState, createContext } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 
@@ -7,17 +7,24 @@ export const ArticleContext = createContext();
 const ArticleProvider = ({ children }) => {
   const [article, setArticle] = useState({});
 
-  const getArticle = async (id) => {
+  //simulated article navigation interface, because only one article in json
+  let id_article = 1;
+
+  const getArticle = async (id_article) => {
     try {
-      const { data } = await axios.get(`data/article${id}.json`);
+      const { data } = await axios.get(`data/article${id_article}.json`);
       setArticle(data);
     } catch (error) {
       console.log(error);
     }
   };
 
+  useEffect(() => {
+    getArticle(id_article);
+  }, [id_article]);
+
   return (
-    <ArticleContext.Provider value={{ article, getArticle }}>
+    <ArticleContext.Provider value={{ article }}>
       {children}
     </ArticleContext.Provider>
   );

@@ -1,16 +1,11 @@
-import { useEffect, useContext } from 'react';
+import { useContext } from 'react';
 import CartContext from '../../context/cartProvider';
 import UserContext from '../../context/userProvider';
 import './cart.css';
 
 const Cart = () => {
-  const { getUser, user } = useContext(UserContext);
+  const { user } = useContext(UserContext);
   const { cart } = useContext(CartContext);
-  const id = 1;
-
-  useEffect(() => {
-    getUser(id);
-  }, []);
 
   const { avatar } = user;
 

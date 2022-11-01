@@ -16,8 +16,10 @@ const CartProvider = ({ children }) => {
 
   const addItem = (item) => {
     let cartCopy = [...cart];
-    let { ID } = item;
-    let existingItem = cartCopy.find((cartItem) => cartItem.ID === ID);
+    let { id_article } = item;
+    let existingItem = cartCopy.find(
+      (cartItem) => cartItem.id_article === id_article
+    );
 
     if (existingItem) {
       existingItem.quantity += item.quantity;
@@ -31,31 +33,10 @@ const CartProvider = ({ children }) => {
     localStorage.setItem('cart', stringCart);
   };
 
-  const updateItem = (itemID, amount) => {
+  const removeItem = (id_article) => {
     let cartCopy = [...cart];
 
-    let existentItem = cartCopy.find((item) => item.ID === itemID);
-
-    if (!existentItem) return;
-
-    existentItem.quantity += amount;
-
-    if (existentItem.quantity <= 0) {
-      //remove item  by filtering it from cart array
-      cartCopy = cartCopy.filter((item) => item.ID !== itemID);
-    }
-
-    //again, update state and localState
-    setCart(cartCopy);
-
-    let cartString = JSON.stringify(cartCopy);
-    localStorage.setItem('cart', cartString);
-  };
-
-  const removeItem = (itemID) => {
-    let cartCopy = [...cart];
-
-    cartCopy = cartCopy.filter((item) => item.ID !== itemID);
+    cartCopy = cartCopy.filter((item) => item.id_article !== id_article);
 
     //update state and local
     setCart(cartCopy);
@@ -65,7 +46,7 @@ const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider value={{ cart, addItem, updateItem, removeItem }}>
+    <CartContext.Provider value={{ cart, addItem, removeItem }}>
       {children}
     </CartContext.Provider>
   );

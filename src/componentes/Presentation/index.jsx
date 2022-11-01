@@ -1,19 +1,45 @@
-import { useEffect, useContext } from 'react';
+import { useState, useContext } from 'react';
 import ArticleContext from '../../context/articleProvider';
 import CartContext from '../../context/cartProvider';
-import IncreaseButton from '../IncreaseButton';
 import './presentation.css';
 
 const Presentation = () => {
-  let id = 1;
-  const { article, getArticle } = useContext(ArticleContext);
+  const { article } = useContext(ArticleContext);
   const { addItem } = useContext(CartContext);
 
-  useEffect(() => {
-    getArticle(id);
-  }, []);
+  const {
+    id_article,
+    name,
+    description,
+    price,
+    rebate,
+    old_price,
+    thumbnails,
+  } = article;
 
-  const { id_article, name, description, price, rebate, old_price } = article;
+  const [counter, setCounter] = useState(1);
+
+  let shopCart = {
+    id: id_article,
+    name: name,
+    price: price,
+    image: thumbnails[0],
+    quantity: counter,
+  };
+
+  console.log(shopCart);
+  const incrementCount = () => {
+    setCounter(counter + 1);
+    shopCart.quantity = counter;
+  };
+  const decrementCount = () => {
+    setCounter((c) => Math.max(c - 1, 0));
+    shopCart.quantity = counter;
+  };
+
+  const validateItem = () => {
+    addItem(shopCart);
+  };
 
   if (id_article) {
     return (
@@ -26,8 +52,16 @@ const Presentation = () => {
         </p>
         <p className="old-price">{old_price}</p>
         <div className="section-buttons">
-          <IncreaseButton />
-          <button className="add" onClick={addItem}>
+          <div className="btn-group">
+            <button className="btn btn-left" onClick={decrementCount}>
+              <img src="images/icon-minus.svg" alt="minus" />
+            </button>
+            <button className="btn btn-center">{counter}</button>
+            <button className="btn btn-right" onClick={incrementCount}>
+              <img src="images/icon-plus.svg" alt="minus" />
+            </button>
+          </div>
+          <button className="add" onClick={validateItem}>
             <img
               className="cart-btn"
               src="images/icon-little-cart.svg"

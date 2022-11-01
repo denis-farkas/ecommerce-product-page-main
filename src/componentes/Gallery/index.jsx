@@ -1,14 +1,9 @@
-import { useEffect, useContext } from 'react';
+import { useContext } from 'react';
 import ArticleContext from '../../context/articleProvider';
 import './gallery.css';
 
 const Gallery = () => {
-  const { article, getArticle } = useContext(ArticleContext);
-  let id = 1;
-
-  useEffect(() => {
-    getArticle(id);
-  }, []);
+  const { article } = useContext(ArticleContext);
 
   const { pictures, thumbnails } = article;
   if (pictures) {
