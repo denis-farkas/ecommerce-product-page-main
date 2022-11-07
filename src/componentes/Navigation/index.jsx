@@ -6,38 +6,38 @@ import './mobile-navigation.css';
 const Navigation = () => {
   return (
     <div className="navbar">
-      <ul className="navbar-nav">
+      <div className="navbar-nav">
         <NavLink
           to={`/collections`}
           className={(nav) => (nav.isActive ? 'nav active' : 'nav')}
         >
-          <li className="nav-item">Collections</li>
+          <div className="nav-item">Collections</div>
         </NavLink>
         <NavLink
           to={`/men`}
           className={(nav) => (nav.isActive ? 'nav active' : 'nav')}
         >
-          <li className="nav-item">Men</li>
+          <div className="nav-item">Men</div>
         </NavLink>
         <NavLink
           to={`/women`}
           className={(nav) => (nav.isActive ? 'nav active' : 'nav')}
         >
-          <li className="nav-item">Women</li>
+          <div className="nav-item">Women</div>
         </NavLink>
         <NavLink
           to={`/about`}
           className={(nav) => (nav.isActive ? 'nav active' : 'nav')}
         >
-          <li className="nav-item">About</li>
+          <div className="nav-item">About</div>
         </NavLink>
         <NavLink
           to={`/contact`}
           className={(nav) => (nav.isActive ? 'nav active' : 'nav')}
         >
-          <li className="nav-item">Contact</li>
+          <div className="nav-item">Contact</div>
         </NavLink>
-      </ul>
+      </div>
     </div>
   );
 };
