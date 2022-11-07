@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/denis-farkas/ecommerce-product-page-main)
-- Live Site URL: [Vercel](https://ecommerce-product-page-main-nfn5kyyic-denis-farkas.vercel.app/)
+- Live Site URL: [Vercel](https://ecommerce-product-page-main-f11004qgt-denis-farkas.vercel.app/)
 
 ## My process
 
