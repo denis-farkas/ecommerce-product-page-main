@@ -1,0 +1,39 @@
+@media screen and (max-width: 975px) {
+  .shopping-cart {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .shopping {
+    width: 90%;
+    margin: 0 auto;
+    position: fixed;
+    top: 10%;
+    right: 5%;
+  }
+
+  .shopping-cart-body {
+    height: 3.125rem;
+    padding: 3.75rem 1rem;
+    margin: 0 auto;
+  }
+
+  .shopping-cart ul {
+    margin: 1rem auto;
+  }
+
+  .shopping-cart .checkout {
+    width: 90%;
+  }
+
+  .shopping-cart-items {
+    width: 90%;
+    margin: 0.5rem auto;
+    text-align: center;
+  }
+
+  .shopping-cart-body.big {
+    width: 90%;
+    height: 5rem;
+  }
+}

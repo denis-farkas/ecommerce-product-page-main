@@ -1,0 +1,34 @@
+@media screen and (max-width: 975px) {
+  .lightbox-container {
+    width: 95%;
+    height: 100%;
+    margin: 4rem auto;
+  }
+  .lightbox-header {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 90%;
+    height: 4rem;
+  }
+  .lightbox-body {
+    width: 90%;
+  }
+
+  .lightbox-img {
+    border-radius: 1rem;
+    width: 100%;
+    height: auto;
+  }
+  .lightbox-footer {
+    width: 90%;
+  }
+
+  .light-thumb,
+  .light-image-thumb,
+  .light-thumb:hover::before,
+  .light-thumb.selected::before {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}

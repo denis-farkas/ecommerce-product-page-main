@@ -1,0 +1,19 @@
+@media screen and (max-width: 975px) {
+  .gallery {
+    width: 100%;
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+  .gallery-footer {
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  .thumb,
+  .image-thumb,
+  .thumb:hover::before,
+  .thumb.selected::before {
+    width: 4rem;
+    height: 4rem;
+  }
+}

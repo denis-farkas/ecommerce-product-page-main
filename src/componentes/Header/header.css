@@ -10,6 +10,11 @@
           align-items: center;
   width: 100%;
   border-bottom: 1px solid #b6bcc8;
+  position: relative;
+}
+
+.menu-mobile {
+  display: none;
 }
 
 .header-left {
@@ -22,7 +27,6 @@
 }
 
 .header-right {
-  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

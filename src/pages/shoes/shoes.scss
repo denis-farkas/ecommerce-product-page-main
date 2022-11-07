@@ -4,12 +4,12 @@ html {
 
 body {
   font-family: 'Kumbh Sans', sans-serif;
-  width: 1440px;
+  width: 90rem;
   margin: 0 auto;
 }
 
 .container {
-  width: 1108px;
+  width: 69.25rem;
   height: auto;
   margin: 0 auto;
 }
@@ -19,12 +19,29 @@ body {
 }
 
 .show {
-  width: 554px;
+  width: 34.625rem;
   justify-content: center;
   align-items: center;
 }
 .presentation {
-  width: 554px;
+  width: 34.625rem;
   justify-content: flex-start;
   align-items: center;
+}
+
+.footer {
+  padding: 2rem;
+  width: 100%;
+}
+.footer-content {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 1293px) {
+  html {
+    font-size: 14px;
+  }
+  body {
+    width: 100%;
+  }
 }

@@ -23,11 +23,21 @@ const ArticleProvider = ({ children }) => {
     getArticle(id_article);
   }, []);
 
-  return (
-    <ArticleContext.Provider value={{ article }}>
-      {children}
-    </ArticleContext.Provider>
-  );
+  const { pictures, thumbnails } = article;
+
+  if (pictures) {
+    return (
+      <ArticleContext.Provider
+        value={{
+          article,
+          pictures,
+          thumbnails,
+        }}
+      >
+        {children}
+      </ArticleContext.Provider>
+    );
+  }
 };
 
 export { ArticleProvider };

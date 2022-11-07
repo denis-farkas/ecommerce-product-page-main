@@ -29,29 +29,19 @@
 .thumb,
 .image-thumb {
   width: 5.5rem;
-  height: auto;
+  height: 5.5rem;
   border-radius: 0.8rem;
   position: relative;
 }
 
-.image-thumb.selected {
-  border: 2px solid hsl(26, 100%, 55%);
+.thumb:hover,
+.thumb.selected {
+  outline: 2px solid hsl(26, 100%, 55%);
+  cursor: pointer;
 }
 
-.thumb:first-child::before,
-.thumb:first-child:hover::before {
-  width: 5.5rem;
-  height: 5.5rem;
-  content: '';
-  border-radius: 0.8rem;
-  position: absolute;
-  z-index: 2;
-  top: 2px;
-  left: 2px;
-  background-color: rgba(255, 255, 255, 0.537);
-}
-
-.thumb:hover::before {
+.thumb:hover::before,
+.thumb.selected::before {
   width: 5.5rem;
   height: 5.5rem;
   content: '';

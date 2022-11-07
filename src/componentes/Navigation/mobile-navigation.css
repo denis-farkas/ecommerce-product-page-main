@@ -1,0 +1,71 @@
+@media screen and (max-width: 975px) {
+  .menu-mobile {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-top: 3px;
+    margin-right: 10px;
+  }
+  .header {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .topnav {
+    display: none;
+  }
+  .topnav.responsive {
+    display: block;
+    position: fixed;
+    background-color: white;
+    width: 70%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    padding-top: 5rem;
+    padding-left: 2rem;
+  }
+  .notVisible {
+    display: none;
+  }
+  .visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(44, 43, 43, 0.652);
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .topnav .close-mobile {
+    display: none;
+  }
+  .topnav.responsive .close-mobile {
+    display: block;
+    cursor: pointer;
+  }
+  .topnav.responsive .navbar-nav {
+    margin: 2rem 1rem;
+  }
+  .topnav.responsive .nav {
+    display: block;
+    padding-top: 0.5rem;
+    padding-bottom: 0rem;
+    color: black;
+    margin: 0;
+    width: 30%;
+    font-weight: 700;
+  }
+  .topnav.responsive .nav.active {
+    border-bottom: 2px solid #ff7d1a;
+    padding-bottom: 0.1rem;
+  }
+}
+/*# sourceMappingURL=mobile-navigation.css.map */

@@ -2,11 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { UserProvider } from './context/userProvider';
+import { ArticleProvider } from './context/articleProvider';
+import { CartProvider } from './context/cartProvider';
+import { LightboxProvider } from './context/lightboxProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <UserProvider>
+      <LightboxProvider>
+        <ArticleProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </ArticleProvider>
+      </LightboxProvider>
+    </UserProvider>
   </React.StrictMode>
 );
 

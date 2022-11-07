@@ -3,12 +3,16 @@
   height: auto;
   cursor: pointer;
   padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .avatar:hover {
   border: 2px solid #ff7d1a;
   border-radius: 50%;
   padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .cart {
@@ -22,9 +26,37 @@
       -ms-flex-align: center;
           align-items: center;
   width: 7.2rem;
+  position: relative;
 }
 
 .small-cart {
   cursor: pointer;
+}
+
+.small-cart:hover {
+  color: black;
+}
+
+.badge {
+  background-color: #ff7d1a;
+  border-radius: 15px;
+  color: white;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 8px;
+  height: 3px;
+  padding: 6px 7px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+  width: 6px;
+  position: absolute;
+  top: 13%;
+  left: 7.5%;
 }
 /*# sourceMappingURL=cart.css.map */

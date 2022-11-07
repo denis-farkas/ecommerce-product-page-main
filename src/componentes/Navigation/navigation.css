@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+.topnav .close-mobile {
+  display: none;
+}
+
 .nav {
   display: inline-block;
   margin: 0 1rem;
